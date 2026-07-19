@@ -172,6 +172,9 @@
     .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:44px}
     .hero{padding:140px 0 80px}
     .hero-media{max-width:440px;margin:0 auto}
+    .hero-media .pill{position:static;width:100%;box-sizing:border-box;margin-top:12px;animation:none;box-shadow:var(--shadow-sm)}
+    .hero-media .pill.p1,.hero-media .pill.p2{left:auto;right:auto;top:auto;bottom:auto}
+    .hero-media .halo{display:none}
     .trust .row{grid-template-columns:1fr 1fr;gap:26px}
     .proc-grid,.steps{grid-template-columns:1fr}
     .about-media .badge{left:12px}
@@ -179,7 +182,6 @@
   }
   @media(max-width:520px){
     .trust .row{grid-template-columns:1fr}
-    .hero-media .pill.p1{left:-6px}.hero-media .pill.p2{right:-6px}
     .fab .lbl{display:none}
   }
   @media(prefers-reduced-motion:reduce){
@@ -238,7 +240,7 @@
       <div class="halo"></div>
       <div class="frame"><img src="assets/foto-2.jpeg" alt="Dr. Gabriel Ataide Monção"></div>
       <div class="pill p1">
-        <span class="ic"><i data-lucide="aperture" style="width:20px;height:20px;color:var(--color-accent-hover)"></i></span>
+        <span class="ic"><i data-lucide="video" style="width:20px;height:20px;color:var(--color-accent-hover)"></i></span>
         <span><span class="pt">Videolaparoscopia</span><br><span class="ps">Técnica de precisão</span></span>
       </div>
       <div class="pill p2">
@@ -273,7 +275,7 @@
       <p class="sec-sub">Cirurgião geral e do aparelho digestivo, dedicado à cirurgia minimamente invasiva. O que os pacientes mais destacam é a segurança que ele transmite e a clareza com que explica cada passo.</p>
       <div class="pillars">
         <div class="pillar"><span class="ic"><i data-lucide="shield-check" style="width:24px;height:24px"></i></span><div><h3>Confiança que acalma</h3><p>Você entende o seu caso e decide com segurança, sem pressa e sem alarmismo.</p></div></div>
-        <div class="pillar"><span class="ic"><i data-lucide="aperture" style="width:24px;height:24px"></i></span><div><h3>Técnica e modernidade</h3><p>Cirurgia videolaparoscópica: pequenas incisões, precisão e recuperação mais rápida.</p></div></div>
+        <div class="pillar"><span class="ic"><i data-lucide="scan-line" style="width:24px;height:24px"></i></span><div><h3>Técnica e modernidade</h3><p>Cirurgia videolaparoscópica: pequenas incisões, precisão e recuperação mais rápida.</p></div></div>
         <div class="pillar"><span class="ic"><i data-lucide="heart-handshake" style="width:24px;height:24px"></i></span><div><h3>Acolhimento didático</h3><p>Explico cada etapa com clareza e no seu tempo, do diagnóstico ao pós-operatório.</p></div></div>
       </div>
     </div>
@@ -311,7 +313,7 @@
     </div>
     <div class="steps">
       <div class="step" data-reveal><div class="num">Etapa 01</div><span class="ic"><i data-lucide="messages-square" style="width:24px;height:24px"></i></span><h3>Conversa</h3><p>Entendemos juntos o seu caso, os exames e as opções, sem pressa.</p></div>
-      <div class="step" data-reveal><div class="num">Etapa 02</div><span class="ic"><i data-lucide="aperture" style="width:24px;height:24px"></i></span><h3>Via minimamente invasiva</h3><p>Quando indicada, a cirurgia videolaparoscópica: pequenas incisões, câmera e precisão.</p></div>
+      <div class="step" data-reveal><div class="num">Etapa 02</div><span class="ic"><i data-lucide="video" style="width:24px;height:24px"></i></span><h3>Via minimamente invasiva</h3><p>Quando indicada, a cirurgia videolaparoscópica: pequenas incisões, câmera e precisão.</p></div>
       <div class="step" data-reveal><div class="num">Etapa 03</div><span class="ic"><i data-lucide="leaf" style="width:24px;height:24px"></i></span><h3>Recuperação</h3><p>Menos dor e cicatrizes menores tendem a favorecer um retorno mais rápido à rotina.</p></div>
     </div>
     <div class="bene" data-reveal>
