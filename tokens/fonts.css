@@ -1,0 +1,7 @@
+/* ============================================================
+   FONTS — Google Fonts webfont declarations
+   Spectral (serif display) · Public Sans (sans body) · IBM Plex Mono
+   NOTE: loaded from Google Fonts CDN. If offline binaries are
+   required, swap these @import/@font-face for local files.
+   ============================================================ */
+@import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap");

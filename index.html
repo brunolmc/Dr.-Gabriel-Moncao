@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Gabriel Ataide Monção · Cirurgia do Aparelho Digestivo Minimamente Invasiva</title>
+<meta name="description" content="Cirurgia do aparelho digestivo minimamente invasiva em Belo Horizonte. Dr. Gabriel Ataide Monção, especialista com dupla titulação (RQE). Avaliação com clareza e cuidado.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="styles.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  :root{--wa:#25913f}
+  html{scroll-behavior:smooth}
+  body{margin:0;overflow-x:hidden}
+  ::selection{background:var(--green-200);color:var(--petrol-900)}
+  a{color:var(--text-link)}a:hover{color:var(--text-link-hover)}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  .eyebrow-chip{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green-800);background:var(--green-100);border:1px solid var(--green-300);padding:7px 16px;border-radius:999px}
+
+  /* ---- animated gradient system ---- */
+  @keyframes drift{0%{transform:translate3d(0,0,0) scale(1)}33%{transform:translate3d(4%,-3%,0) scale(1.08)}66%{transform:translate3d(-3%,4%,0) scale(.96)}100%{transform:translate3d(0,0,0) scale(1)}}
+  @keyframes hue{0%,100%{filter:hue-rotate(0deg)}50%{filter:hue-rotate(-8deg)}}
+  @keyframes shimmer{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+  .blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;will-change:transform;animation:drift 18s var(--ease-standard) infinite}
+  .grad-text{background:linear-gradient(100deg,var(--petrol-600),var(--green-600),var(--petrol-500));background-size:220% 220%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 9s ease-in-out infinite}
+
+  /* ---- header ---- */
+  header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(251,252,253,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-subtle);transition:box-shadow .35s var(--ease-standard),padding .35s var(--ease-standard)}
+  header .bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0;transition:padding .35s var(--ease-standard)}
+  header.scrolled{box-shadow:var(--shadow-sm)}
+  header.scrolled .bar{padding:11px 0}
+  .brand{display:flex;align-items:center;gap:13px;text-decoration:none}
+  .brand img{width:46px;height:46px;object-fit:contain;transition:width .35s,height .35s}
+  header.scrolled .brand img{width:40px;height:40px}
+  .brand .bt{display:block;font-family:var(--font-serif);font-weight:600;font-size:19px;color:var(--text-strong);line-height:1;letter-spacing:-.01em}
+  .brand .bs{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent-hover);font-weight:600;margin-top:3px}
+  nav.main{display:flex;align-items:center;gap:30px}
+  nav.main a{font-size:15px;font-weight:500;color:var(--text-body);text-decoration:none;position:relative}
+  nav.main a::after{content:"";position:absolute;left:0;right:100%;bottom:-6px;height:2px;background:var(--color-accent);transition:right .3s var(--ease-out);border-radius:2px}
+  nav.main a:hover{color:var(--text-strong)}nav.main a:hover::after{right:0}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--font-body);font-weight:600;border-radius:999px;cursor:pointer;text-decoration:none;border:1px solid transparent;transition:all .2s var(--ease-standard);white-space:nowrap}
+  .btn-wa{background:var(--green-500);color:#12250a;padding:12px 22px;font-size:15px;box-shadow:var(--shadow-sm)}
+  .btn-wa:hover{background:var(--green-600);color:#12250a;box-shadow:var(--shadow-md);transform:translateY(-1px)}
+  .btn-lg{padding:16px 30px;font-size:17px}
+  .btn-outline{background:transparent;color:var(--color-primary);border-color:var(--border-strong);padding:15px 28px;font-size:16px}
+  .btn-outline:hover{background:var(--surface-sunken);border-color:var(--color-primary);color:var(--color-primary)}
+  .menu-toggle{display:none;background:none;border:none;color:var(--text-strong);cursor:pointer;padding:6px}
+
+  /* ---- hero ---- */
+  .hero{position:relative;padding:190px 0 110px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0;background:
+     radial-gradient(1200px 700px at 78% -8%,var(--green-50),transparent 60%),
+     radial-gradient(900px 600px at 8% 108%,var(--petrol-50),transparent 55%),
+     var(--surface-page);animation:hue 16s ease-in-out infinite}
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .92fr;gap:66px;align-items:center}
+  .hero h1{font-family:var(--font-serif);font-weight:600;font-size:clamp(44px,5.4vw,74px);line-height:1.02;letter-spacing:-.025em;color:var(--text-strong);margin:26px 0 0}
+  .hero .lead{font-size:20px;line-height:1.62;color:var(--text-body);margin:26px 0 0;max-width:50ch;font-weight:300}
+  .hero-cta{display:flex;gap:15px;align-items:center;flex-wrap:wrap;margin:36px 0 30px}
+  .cred-line{display:flex;flex-wrap:wrap;gap:9px 18px;align-items:center;font-size:14px;color:var(--text-muted)}
+  .cred-line b{color:var(--text-body);font-weight:600}
+  .cred-line .dot{width:4px;height:4px;border-radius:50%;background:var(--green-400)}
+  .hero-media{position:relative}
+  .hero-media .frame{position:relative;z-index:2;border-radius:34px 34px 34px 90px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:5/6}
+  .hero-media .frame img{width:100%;height:100%;object-fit:cover;object-position:top}
+  .hero-media .halo{position:absolute;z-index:1;inset:-26px -26px auto auto;width:74%;height:82%;background:conic-gradient(from 140deg,var(--green-300),var(--petrol-200),var(--green-200),var(--green-300));border-radius:40px 40px 40px 100px;filter:blur(6px);opacity:.9;animation:floaty 7s ease-in-out infinite}
+  .hero-media .pill{position:absolute;z-index:3;background:var(--white);border:1px solid var(--border-subtle);box-shadow:var(--shadow-md);border-radius:16px;padding:14px 18px;display:flex;align-items:center;gap:12px}
+  .hero-media .pill .ic{width:40px;height:40px;border-radius:11px;background:var(--green-100);display:flex;align-items:center;justify-content:center;flex:none}
+  .hero-media .pill .pt{font-family:var(--font-serif);font-weight:600;font-size:16px;color:var(--text-strong);line-height:1.1}
+  .hero-media .pill .ps{font-size:12px;color:var(--text-muted)}
+  .hero-media .pill.p1{left:-34px;top:20%;animation:floaty 6s ease-in-out infinite}
+  .hero-media .pill.p2{right:-22px;bottom:14%;animation:floaty 8s ease-in-out .5s infinite}
+
+  /* ---- trust strip ---- */
+  .trust{background:var(--petrol-800);color:var(--text-on-dark);position:relative;overflow:hidden}
+  .trust .blob{background:var(--green-500);width:420px;height:420px;top:-220px;left:60%;opacity:.22}
+  .trust .row{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:34px 0}
+  .trust .cell{display:flex;align-items:center;gap:14px}
+  .trust .cell .n{font-family:var(--font-serif);font-size:32px;font-weight:600;color:#fff;line-height:1}
+  .trust .cell .l{font-size:13.5px;line-height:1.35;color:rgba(238,243,248,.8)}
+  .trust .cell .ic{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.09);display:flex;align-items:center;justify-content:center;flex:none;color:var(--green-300)}
+
+  /* ---- section shell ---- */
+  section.pad{padding:100px 0}
+  .sec-head{max-width:60ch}
+  .sec-head.center{margin:0 auto;text-align:center}
+  .sec-eyebrow{font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-hover);margin-bottom:14px}
+  h2.sec-title{font-family:var(--font-serif);font-weight:600;font-size:clamp(32px,3.8vw,50px);line-height:1.05;letter-spacing:-.02em;color:var(--text-strong);margin:0}
+  .sec-sub{font-size:19px;line-height:1.6;color:var(--text-muted);margin:20px 0 0;font-weight:300}
+
+  /* ---- sobre ---- */
+  .about-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:60px;align-items:center}
+  .about-media{position:relative}
+  .about-media img{width:100%;border-radius:28px;box-shadow:var(--shadow-md);display:block;aspect-ratio:4/5;object-fit:cover;object-position:top;background:#fff}
+  .about-media .badge{position:absolute;left:-24px;bottom:28px;background:var(--white);border:1px solid var(--border-subtle);border-radius:18px;box-shadow:var(--shadow-lg);padding:18px 22px;max-width:230px}
+  .about-media .badge .q{font-family:var(--font-serif);font-style:italic;font-size:17px;line-height:1.35;color:var(--text-strong)}
+  .pillars{display:flex;flex-direction:column;gap:22px;margin-top:34px}
+  .pillar{display:flex;gap:18px;align-items:flex-start}
+  .pillar .ic{width:50px;height:50px;border-radius:14px;background:var(--green-100);display:flex;align-items:center;justify-content:center;flex:none;color:var(--color-accent-hover)}
+  .pillar h3{font-family:var(--font-serif);font-size:21px;font-weight:600;color:var(--text-strong);margin:2px 0 5px}
+  .pillar p{font-size:15.5px;line-height:1.55;color:var(--text-muted);margin:0}
+
+  /* ---- procedimentos ---- */
+  .proc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px}
+  .proc{background:var(--surface-card);border:1px solid var(--border-subtle);border-top:3px solid var(--color-accent);border-radius:18px;padding:30px 28px;transition:transform .3s var(--ease-standard),box-shadow .3s var(--ease-standard);box-shadow:var(--shadow-sm)}
+  .proc:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+  .proc .ic{width:52px;height:52px;border-radius:14px;background:var(--surface-soft);display:flex;align-items:center;justify-content:center;color:var(--color-accent-hover);margin-bottom:16px}
+  .proc h3{font-family:var(--font-serif);font-size:22px;font-weight:600;color:var(--text-strong);margin:0 0 9px}
+  .proc p{font-size:15.5px;line-height:1.58;color:var(--text-body);margin:0;font-weight:300}
+
+  /* ---- abordagem (dark, animated) ---- */
+  .approach{position:relative;overflow:hidden;background:var(--petrol-900);color:var(--text-on-dark)}
+  .approach .blob.b1{background:var(--petrol-500);width:520px;height:520px;top:-160px;left:-120px}
+  .approach .blob.b2{background:var(--green-600);width:460px;height:460px;bottom:-200px;right:-100px;animation-delay:-6s}
+  .approach .inner{position:relative;z-index:2}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+  .step{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.11);border-radius:18px;padding:30px 28px;backdrop-filter:blur(4px)}
+  .step .num{font-family:var(--font-serif);font-size:15px;font-weight:600;color:var(--green-300);letter-spacing:.06em}
+  .step .ic{width:52px;height:52px;border-radius:14px;background:var(--green-500);display:flex;align-items:center;justify-content:center;color:#12250a;margin:14px 0 16px}
+  .step h3{font-family:var(--font-serif);font-size:22px;font-weight:600;color:#fff;margin:0 0 8px}
+  .step p{font-size:15px;line-height:1.6;color:rgba(238,243,248,.8);margin:0;font-weight:300}
+  .bene{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px;justify-content:center}
+  .bene span{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:11px 20px;font-size:15px;color:#eef3f8}
+  .bene span svg{color:var(--green-300)}
+  .disc{text-align:center;font-size:13.5px;color:rgba(238,243,248,.5);max-width:66ch;margin:38px auto 0;line-height:1.6}
+
+  /* ---- FAQ ---- */
+  .faq-grid{max-width:820px;margin:44px auto 0}
+  .faq{border-bottom:1px solid var(--border-default)}
+  .faq button{width:100%;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:24px 4px;text-align:left;font-family:var(--font-serif);font-size:21px;font-weight:600;color:var(--text-strong)}
+  .faq button .chev{flex:none;color:var(--color-accent-hover);transition:transform .3s var(--ease-standard)}
+  .faq.open button .chev{transform:rotate(180deg)}
+  .faq .ans{max-height:0;overflow:hidden;transition:max-height .4s var(--ease-standard)}
+  .faq .ans p{font-size:16px;line-height:1.65;color:var(--text-body);margin:0 4px 24px;font-weight:300}
+
+  /* ---- contato ---- */
+  .contact{position:relative;overflow:hidden}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:stretch}
+  .contact-card{background:var(--surface-card);border:1px solid var(--border-subtle);border-top:3px solid var(--color-accent);border-radius:22px;box-shadow:var(--shadow-md);padding:38px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:14px;font-weight:600;color:var(--text-body);margin-bottom:7px}
+  .field input,.field textarea{width:100%;box-sizing:border-box;padding:13px 15px;font-family:var(--font-body);font-size:16px;color:var(--text-strong);background:var(--white);border:1px solid var(--border-default);border-radius:10px;outline:none;transition:border-color .15s,box-shadow .15s}
+  .field input:focus,.field textarea:focus{border-color:var(--color-accent);box-shadow:var(--shadow-focus)}
+  .info-item{display:flex;gap:15px;align-items:center;padding:16px 0;border-bottom:1px solid var(--border-subtle)}
+  .info-item .ic{width:46px;height:46px;border-radius:12px;background:var(--surface-soft);display:flex;align-items:center;justify-content:center;color:var(--color-primary);flex:none}
+  .info-item .t{font-size:13px;color:var(--text-muted);letter-spacing:.02em}
+  .info-item .v{font-size:17px;color:var(--text-strong);font-weight:600}
+
+  /* ---- footer ---- */
+  footer.site{background:var(--petrol-900);color:rgba(238,243,248,.7);padding:56px 0 30px}
+  footer.site .top{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;flex-wrap:wrap}
+  footer.site .brand .bt{color:#fff}
+  footer.site .soc{display:flex;gap:12px}
+  footer.site .soc a{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:var(--green-300);transition:background .2s}
+  footer.site .soc a:hover{background:rgba(255,255,255,.16)}
+  footer.site .cred{font-size:14px;color:rgba(238,243,248,.62);margin-top:14px}
+  footer.site .rule{border-top:1px solid rgba(255,255,255,.1);margin-top:34px;padding-top:22px;font-size:12.5px;color:rgba(238,243,248,.45);line-height:1.6}
+
+  /* ---- floating WhatsApp ---- */
+  .fab{position:fixed;right:24px;bottom:24px;z-index:60;display:inline-flex;align-items:center;gap:11px;background:var(--wa);color:#fff;text-decoration:none;padding:14px 20px 14px 16px;border-radius:999px;box-shadow:0 12px 30px rgba(37,145,63,.4);font-weight:600;font-size:15px;transition:transform .2s,box-shadow .2s}
+  .fab:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 16px 40px rgba(37,145,63,.5);color:#fff}
+  .fab svg{width:24px;height:24px}
+  .fab .lbl{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .4s var(--ease-out)}
+  .fab:hover .lbl,.fab.show-lbl .lbl{max-width:180px}
+
+  /* ---- reveal (JS-gated so content is always visible without JS) ---- */
+  .js [data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}
+
+  @media(max-width:940px){
+    nav.main{display:none}
+    .menu-toggle{display:inline-flex}
+    .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:44px}
+    .hero{padding:140px 0 80px}
+    .hero-media{max-width:440px;margin:0 auto}
+    .trust .row{grid-template-columns:1fr 1fr;gap:26px}
+    .proc-grid,.steps{grid-template-columns:1fr}
+    .about-media .badge{left:12px}
+    section.pad{padding:74px 0}
+  }
+  @media(max-width:520px){
+    .trust .row{grid-template-columns:1fr}
+    .hero-media .pill.p1{left:-6px}.hero-media .pill.p2{right:-6px}
+    .fab .lbl{display:none}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .blob,.halo,.pill,.grad-text,.hero-bg{animation:none!important}
+    .js [data-reveal]{opacity:1;transform:none;transition:none}
+  }
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap bar">
+    <a href="#topo" class="brand">
+      <img src="assets/logo.png" alt="Dr. Gabriel Ataide Monção">
+      <span><span class="bt">Dr. Gabriel Ataide</span><span class="bs">Cirurgia do Aparelho Digestivo</span></span>
+    </a>
+    <nav class="main">
+      <a href="#sobre">Sobre</a>
+      <a href="#procedimentos">Procedimentos</a>
+      <a href="#abordagem">Abordagem</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a class="btn btn-wa" href="https://wa.me/5538991721201?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.75 14.06c-.24.68-1.2 1.19-1.67 1.26-.42.06-.95.09-1.53-.1-.35-.11-.8-.26-1.38-.51-2.44-1.05-4.03-3.5-4.15-3.66-.12-.16-.99-1.31-.99-2.51s.63-1.79.85-2.03c.22-.24.48-.3.64-.3.16 0 .32 0 .46.01.15.01.35-.06.54.41.2.48.68 1.66.74 1.78.06.12.1.26.02.42-.08.16-.12.26-.24.4l-.36.42c-.12.12-.24.25-.1.49.14.24.62 1.03 1.34 1.67.92.82 1.7 1.08 1.94 1.2.24.12.38.1.52-.06.14-.16.6-.71.76-.95.16-.24.32-.2.54-.12.22.08 1.41.67 1.65.79.24.12.4.18.46.28.06.1.06.59-.14 1.15Z"/></svg>
+        Agendar
+      </a>
+      <button class="menu-toggle" id="mtoggle" aria-label="Menu"><i data-lucide="menu" style="width:26px;height:26px"></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="topo">
+  <div class="hero-bg"></div>
+  <div class="wrap hero-grid">
+    <div data-reveal>
+      <span class="eyebrow-chip"><i data-lucide="shield-check" style="width:15px;height:15px"></i> Especialista · dupla titulação (RQE)</span>
+      <h1>Cuidado do aparelho digestivo, <span class="grad-text">minimamente invasivo</span>.</h1>
+      <p class="lead">Recebeu a indicação de uma cirurgia ou um exame encontrou algo? O primeiro passo é entender com calma o que está acontecendo. Avalio cada caso, explico cada etapa e busco a via minimamente invasiva, com segurança e cuidado.</p>
+      <div class="hero-cta">
+        <a class="btn btn-wa btn-lg" href="https://wa.me/5538991721201?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.75 14.06c-.24.68-1.2 1.19-1.67 1.26-.42.06-.95.09-1.53-.1-.35-.11-.8-.26-1.38-.51-2.44-1.05-4.03-3.5-4.15-3.66-.12-.16-.99-1.31-.99-2.51s.63-1.79.85-2.03c.22-.24.48-.3.64-.3.16 0 .32 0 .46.01.15.01.35-.06.54.41.2.48.68 1.66.74 1.78.06.12.1.26.02.42-.08.16-.12.26-.24.4l-.36.42c-.12.12-.24.25-.1.49.14.24.62 1.03 1.34 1.67.92.82 1.7 1.08 1.94 1.2.24.12.38.1.52-.06.14-.16.6-.71.76-.95.16-.24.32-.2.54-.12.22.08 1.41.67 1.65.79.24.12.4.18.46.28.06.1.06.59-.14 1.15Z"/></svg>
+          Agendar pelo WhatsApp
+        </a>
+        <a class="btn btn-outline" href="#procedimentos">Ver procedimentos</a>
+      </div>
+      <div class="cred-line">
+        <b>CRM-MG 82743</b><span class="dot"></span>
+        <span>RQE 62392 · Cirurgia Geral</span><span class="dot"></span>
+        <span>RQE 70182 · Ap. Digestivo</span>
+      </div>
+    </div>
+    <div class="hero-media" data-reveal>
+      <div class="halo"></div>
+      <div class="frame"><img src="assets/foto-2.jpeg" alt="Dr. Gabriel Ataide Monção"></div>
+      <div class="pill p1">
+        <span class="ic"><i data-lucide="aperture" style="width:20px;height:20px;color:var(--color-accent-hover)"></i></span>
+        <span><span class="pt">Videolaparoscopia</span><br><span class="ps">Técnica de precisão</span></span>
+      </div>
+      <div class="pill p2">
+        <span class="ic"><i data-lucide="messages-square" style="width:20px;height:20px;color:var(--color-accent-hover)"></i></span>
+        <span><span class="pt">Explicado com calma</span><br><span class="ps">Do diagnóstico ao pós</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="blob"></div>
+  <div class="wrap row">
+    <div class="cell" data-reveal><span class="ic"><i data-lucide="award" style="width:22px;height:22px"></i></span><span><span class="n">2</span><span class="l"> titulações RQE<br>Geral + Ap. Digestivo</span></span></div>
+    <div class="cell" data-reveal><span class="ic"><i data-lucide="scan-line" style="width:22px;height:22px"></i></span><span><span class="l"><b style="color:#fff;font-size:17px">Minimamente invasiva</b><br>menos dor, cicatrizes menores</span></span></div>
+    <div class="cell" data-reveal><span class="ic"><i data-lucide="map-pin" style="width:22px;height:22px"></i></span><span><span class="l"><b style="color:#fff;font-size:17px">Belo Horizonte</b><br>Minas Gerais</span></span></div>
+    <div class="cell" data-reveal><span class="ic"><i data-lucide="messages-square" style="width:22px;height:22px"></i></span><span><span class="l"><b style="color:#fff;font-size:17px">Atendimento próximo</b><br>segunda opinião com clareza</span></span></div>
+  </div>
+</div>
+
+<!-- SOBRE -->
+<section class="pad" id="sobre">
+  <div class="wrap about-grid">
+    <div class="about-media" data-reveal>
+      <img src="assets/foto-1.jpeg" alt="Dr. Gabriel Ataide Monção">
+      <div class="badge"><div class="q">"Um cirurgião em quem confiar num momento de medo."</div></div>
+    </div>
+    <div data-reveal>
+      <div class="sec-eyebrow">Sobre o Dr. Gabriel</div>
+      <h2 class="sec-title">Autoridade técnica que acalma, não que intimida.</h2>
+      <p class="sec-sub">Cirurgião geral e do aparelho digestivo, dedicado à cirurgia minimamente invasiva. O que os pacientes mais destacam é a segurança que ele transmite e a clareza com que explica cada passo.</p>
+      <div class="pillars">
+        <div class="pillar"><span class="ic"><i data-lucide="shield-check" style="width:24px;height:24px"></i></span><div><h3>Confiança que acalma</h3><p>Você entende o seu caso e decide com segurança, sem pressa e sem alarmismo.</p></div></div>
+        <div class="pillar"><span class="ic"><i data-lucide="aperture" style="width:24px;height:24px"></i></span><div><h3>Técnica e modernidade</h3><p>Cirurgia videolaparoscópica: pequenas incisões, precisão e recuperação mais rápida.</p></div></div>
+        <div class="pillar"><span class="ic"><i data-lucide="heart-handshake" style="width:24px;height:24px"></i></span><div><h3>Acolhimento didático</h3><p>Explico cada etapa com clareza e no seu tempo, do diagnóstico ao pós-operatório.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCEDIMENTOS -->
+<section class="pad" id="procedimentos" style="background:var(--surface-sunken)">
+  <div class="wrap">
+    <div class="sec-head center" data-reveal>
+      <div class="sec-eyebrow">Procedimentos</div>
+      <h2 class="sec-title">Condições que trato</h2>
+      <p class="sec-sub">Quando há indicação cirúrgica, priorizo a técnica videolaparoscópica. Cada caso é avaliado individualmente.</p>
+    </div>
+    <div class="proc-grid">
+      <div class="proc" data-reveal><span class="ic"><i data-lucide="droplet" style="width:26px;height:26px"></i></span><h3>Vesícula</h3><p>Retirada da vesícula (colecistectomia) por videolaparoscopia, com pequenas incisões e retorno mais rápido à rotina.</p></div>
+      <div class="proc" data-reveal><span class="ic"><i data-lucide="shield-plus" style="width:26px;height:26px"></i></span><h3>Hérnias</h3><p>Correção de hérnias da parede abdominal e inguinais pela via minimamente invasiva, com técnica atual.</p></div>
+      <div class="proc" data-reveal><span class="ic"><i data-lucide="flame" style="width:26px;height:26px"></i></span><h3>Refluxo</h3><p>Avaliação e tratamento cirúrgico do refluxo gastroesofágico quando indicado, discutindo as alternativas.</p></div>
+      <div class="proc" data-reveal><span class="ic"><i data-lucide="thermometer" style="width:26px;height:26px"></i></span><h3>Apendicite</h3><p>Apendicectomia videolaparoscópica, conduta segura para o quadro agudo.</p></div>
+      <div class="proc" data-reveal><span class="ic"><i data-lucide="microscope" style="width:26px;height:26px"></i></span><h3>Achados em exames</h3><p>Nódulos, cistos e alterações do aparelho digestivo encontrados em exames: avalio e oriento a melhor conduta.</p></div>
+      <div class="proc" data-reveal><span class="ic"><i data-lucide="hand-heart" style="width:26px;height:26px"></i></span><h3>Casos oncológicos</h3><p>Acompanhamento cuidadoso do aparelho digestivo, com foco em conduta, seguimento e cuidado a cada etapa.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABORDAGEM -->
+<section class="pad approach" id="abordagem">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="wrap inner">
+    <div class="sec-head center" data-reveal>
+      <div class="sec-eyebrow" style="color:var(--green-300)">A abordagem</div>
+      <h2 class="sec-title" style="color:#fff">Minimamente invasiva, <span class="grad-text">mais clara</span>.</h2>
+      <p class="sec-sub" style="color:rgba(238,243,248,.82)">A via videolaparoscópica é o caminho que busco sempre que é seguro para o seu caso.</p>
+    </div>
+    <div class="steps">
+      <div class="step" data-reveal><div class="num">Etapa 01</div><span class="ic"><i data-lucide="messages-square" style="width:24px;height:24px"></i></span><h3>Conversa</h3><p>Entendemos juntos o seu caso, os exames e as opções, sem pressa.</p></div>
+      <div class="step" data-reveal><div class="num">Etapa 02</div><span class="ic"><i data-lucide="aperture" style="width:24px;height:24px"></i></span><h3>Via minimamente invasiva</h3><p>Quando indicada, a cirurgia videolaparoscópica: pequenas incisões, câmera e precisão.</p></div>
+      <div class="step" data-reveal><div class="num">Etapa 03</div><span class="ic"><i data-lucide="leaf" style="width:24px;height:24px"></i></span><h3>Recuperação</h3><p>Menos dor e cicatrizes menores tendem a favorecer um retorno mais rápido à rotina.</p></div>
+    </div>
+    <div class="bene" data-reveal>
+      <span><i data-lucide="check" style="width:18px;height:18px"></i> Menos dor</span>
+      <span><i data-lucide="check" style="width:18px;height:18px"></i> Cicatrizes menores</span>
+      <span><i data-lucide="check" style="width:18px;height:18px"></i> Recuperação mais rápida</span>
+      <span><i data-lucide="check" style="width:18px;height:18px"></i> Explicação didática</span>
+    </div>
+    <p class="disc">As informações desta página têm caráter educativo e não substituem uma consulta. Condutas e resultados variam conforme cada caso.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="pad" id="duvidas">
+  <div class="wrap">
+    <div class="sec-head center" data-reveal>
+      <div class="sec-eyebrow">Perguntas frequentes</div>
+      <h2 class="sec-title">Dúvidas comuns</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq" data-reveal><button>O que é cirurgia minimamente invasiva?<i data-lucide="chevron-down" class="chev" style="width:24px;height:24px"></i></button><div class="ans"><p>É a técnica realizada por pequenas incisões, com o auxílio de uma câmera (videolaparoscopia), em vez de um corte grande. Tende a significar menos dor, cicatrizes menores e recuperação mais rápida, sempre que for segura para o seu caso.</p></div></div>
+      <div class="faq" data-reveal><button>Recebi a indicação de cirurgia. Vale uma segunda opinião?<i data-lucide="chevron-down" class="chev" style="width:24px;height:24px"></i></button><div class="ans"><p>Sim. Entender o diagnóstico e as opções com calma é parte do cuidado. Na avaliação, explico o seu caso e as alternativas para que você decida com segurança.</p></div></div>
+      <div class="faq" data-reveal><button>Como funciona o agendamento?<i data-lucide="chevron-down" class="chev" style="width:24px;height:24px"></i></button><div class="ans"><p>O agendamento é feito pelo WhatsApp (38) 99172-1201. Você pode enviar uma mensagem contando um pouco do seu caso, sem urgência.</p></div></div>
+      <div class="faq" data-reveal><button>Quais áreas o Dr. Gabriel atende?<i data-lucide="chevron-down" class="chev" style="width:24px;height:24px"></i></button><div class="ans"><p>Cirurgia geral e cirurgia do aparelho digestivo, com dupla titulação (RQE 62392 e RQE 70182), com foco na abordagem minimamente invasiva.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="pad contact" id="contato" style="background:var(--surface-soft)">
+  <div class="wrap contact-grid">
+    <div data-reveal>
+      <div class="sec-eyebrow">Contato</div>
+      <h2 class="sec-title">Vamos conversar sobre o seu caso.</h2>
+      <p class="sec-sub">O agendamento é feito pelo WhatsApp. Se preferir, deixe uma mensagem e nossa equipe retorna o contato.</p>
+      <div style="margin-top:26px">
+        <a class="btn btn-wa btn-lg" href="https://wa.me/5538991721201?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.75 14.06c-.24.68-1.2 1.19-1.67 1.26-.42.06-.95.09-1.53-.1-.35-.11-.8-.26-1.38-.51-2.44-1.05-4.03-3.5-4.15-3.66-.12-.16-.99-1.31-.99-2.51s.63-1.79.85-2.03c.22-.24.48-.3.64-.3.16 0 .32 0 .46.01.15.01.35-.06.54.41.2.48.68 1.66.74 1.78.06.12.1.26.02.42-.08.16-.12.26-.24.4l-.36.42c-.12.12-.24.25-.1.49.14.24.62 1.03 1.34 1.67.92.82 1.7 1.08 1.94 1.2.24.12.38.1.52-.06.14-.16.6-.71.76-.95.16-.24.32-.2.54-.12.22.08 1.41.67 1.65.79.24.12.4.18.46.28.06.1.06.59-.14 1.15Z"/></svg>
+          (38) 99172-1201
+        </a>
+      </div>
+      <div style="margin-top:26px">
+        <div class="info-item"><span class="ic"><i data-lucide="map-pin" style="width:22px;height:22px"></i></span><span><span class="t">Localização</span><br><span class="v">Belo Horizonte · MG</span></span></div>
+        <div class="info-item"><span class="ic"><i data-lucide="at-sign" style="width:22px;height:22px"></i></span><span><span class="t">Instagram</span><br><span class="v">@gabriel.atm</span></span></div>
+        <div class="info-item" style="border-bottom:none"><span class="ic"><i data-lucide="badge-check" style="width:22px;height:22px"></i></span><span><span class="t">Registro</span><br><span class="v">CRM-MG 82743 · RQE 62392 · RQE 70182</span></span></div>
+      </div>
+    </div>
+    <div class="contact-card" data-reveal>
+      <form onsubmit="return sendWa(event)">
+        <div class="field"><label for="nome">Seu nome</label><input id="nome" type="text" placeholder="Como podemos te chamar?" required></div>
+        <div class="field"><label for="fone">WhatsApp</label><input id="fone" type="text" placeholder="(  ) _____-____"></div>
+        <div class="field"><label for="msg">Conte um pouco do seu caso</label><textarea id="msg" rows="5" placeholder="Sem urgência. Nossa equipe retorna o contato."></textarea></div>
+        <button class="btn btn-wa btn-lg" type="submit" style="width:100%">
+          <i data-lucide="send" style="width:18px;height:18px"></i> Enviar pelo WhatsApp
+        </button>
+        <p style="font-size:12.5px;color:var(--text-subtle);margin:14px 0 0;text-align:center">Ao enviar, você será direcionado ao WhatsApp com a mensagem pronta.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <div class="brand" style="gap:14px">
+          <img src="assets/logo-mono-white.png" alt="" style="width:52px;height:52px;object-fit:contain">
+          <span><span class="bt" style="font-family:var(--font-serif);font-weight:600;font-size:20px">Dr. Gabriel Ataide Monção</span><br><span class="bs" style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--green-300);font-weight:600">Cirurgia do Aparelho Digestivo</span></span>
+        </div>
+        <div class="cred">CRM-MG 82743 · RQE 62392 · RQE 70182</div>
+      </div>
+      <div class="soc">
+        <a href="https://instagram.com/gabriel.atm" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="at-sign" style="width:20px;height:20px"></i></a>
+        <a href="https://wa.me/5538991721201" target="_blank" rel="noopener" aria-label="WhatsApp"><i data-lucide="message-circle" style="width:20px;height:20px"></i></a>
+      </div>
+    </div>
+    <div class="rule">© 2026 Dr. Gabriel Ataide Monção. Conteúdo de caráter educativo, não substitui avaliação médica individual. Sem promessa de resultado.</div>
+  </div>
+</footer>
+
+<a class="fab show-lbl" id="fab" href="https://wa.me/5538991721201?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.75 14.06c-.24.68-1.2 1.19-1.67 1.26-.42.06-.95.09-1.53-.1-.35-.11-.8-.26-1.38-.51-2.44-1.05-4.03-3.5-4.15-3.66-.12-.16-.99-1.31-.99-2.51s.63-1.79.85-2.03c.22-.24.48-.3.64-.3.16 0 .32 0 .46.01.15.01.35-.06.54.41.2.48.68 1.66.74 1.78.06.12.1.26.02.42-.08.16-.12.26-.24.4l-.36.42c-.12.12-.24.25-.1.49.14.24.62 1.03 1.34 1.67.92.82 1.7 1.08 1.94 1.2.24.12.38.1.52-.06.14-.16.6-.71.76-.95.16-.24.32-.2.54-.12.22.08 1.41.67 1.65.79.24.12.4.18.46.28.06.1.06.59-.14 1.15Z"/></svg>
+  <span class="lbl">Agendar pelo WhatsApp</span>
+</a>
+
+<script>
+  // header scroll state
+  var hdr=document.getElementById('hdr');
+  var onScroll=function(){hdr.classList.toggle('scrolled',window.scrollY>24);};
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  // mobile menu (simple anchor jump list)
+  document.getElementById('mtoggle').addEventListener('click',function(){
+    var ids=['sobre','procedimentos','abordagem','duvidas','contato'];
+    document.getElementById('sobre').scrollIntoView?document.querySelector('#sobre'):null;
+    location.hash='#sobre';
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var f=b.parentElement,ans=f.querySelector('.ans');
+      var open=f.classList.toggle('open');
+      ans.style.maxHeight=open?ans.scrollHeight+'px':'0';
+    });
+  });
+
+  // arm reveal only when JS is available (content stays visible otherwise)
+  document.documentElement.classList.add('js');
+  var reveal=function(el){el.style.opacity='1';el.style.transform='none';};
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){reveal(e.target);io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('[data-reveal]').forEach(function(el,i){el.style.transitionDelay=(i%3)*70+'ms';io.observe(el);});
+  requestAnimationFrame(function(){
+    document.querySelectorAll('[data-reveal]').forEach(function(el){
+      if(el.getBoundingClientRect().top < window.innerHeight*0.95){el.style.transition='none';reveal(el);}
+    });
+  });
+
+  // hide fab label after a moment
+  setTimeout(function(){var f=document.getElementById('fab');if(f)f.classList.remove('show-lbl');},3200);
+
+  // contact form -> whatsapp
+  function sendWa(ev){
+    ev.preventDefault();
+    var n=document.getElementById('nome').value.trim();
+    var f=document.getElementById('fone').value.trim();
+    var m=document.getElementById('msg').value.trim();
+    var txt='Olá, Dr. Gabriel. Meu nome é '+(n||'(não informado)')+'.';
+    if(f)txt+=' Meu WhatsApp: '+f+'.';
+    if(m)txt+=' '+m;
+    window.open('https://wa.me/5538991721201?text='+encodeURIComponent(txt),'_blank');
+    return false;
+  }
+
+  if(window.lucide)lucide.createIcons();
+</script>
+</body>
+</html>
